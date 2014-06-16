@@ -10,7 +10,7 @@
       <title><?= htmlentities($tpl['quote']) ?></title>
       <link><?= @$tpl['quote_link'] ?: ("http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) ?></link>
       <description><?= htmlentities($tpl['quote']) ?></description>
-      <guid isPermalink="false"><?= rand() ?></guid>
+      <guid isPermalink="false"><?= md5($tpl['quote']) ?></guid>
       <pubDate><?= date('r') ?></pubDate>
     </item>
   </channel>
